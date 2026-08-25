@@ -19,7 +19,7 @@ const CATEGORIES = [
 ];
 
 
-export default function SKills() {
+export default function Skills() {
     const [skills, setSkills] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

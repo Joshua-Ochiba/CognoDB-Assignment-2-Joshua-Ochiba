@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
-import SKills from './pages/Skills';
+import Skills from './pages/Skills';
 import SkillDetail from './pages/SkillDetail';
 import Jobs from './pages/Jobs';
 import JobDetail from './pages/JobDetail';
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path="skills" element={<SKills />} />
+          <Route path="skills" element={<Skills />} />
           <Route path="skills/:id" element={<SkillDetail />} />
           <Route path="jobs" element={<Jobs />} />
           <Route path="jobs/:id" element={<JobDetail />} />
