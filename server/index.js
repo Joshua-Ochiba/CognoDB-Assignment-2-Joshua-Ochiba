@@ -16,9 +16,25 @@ const recommendationsRoutes = require('./routes/recommendations');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-
 app.use(cors());
 app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.json({
+        name: 'DevPath API',
+        status: 'online',
+        database: 'CognoDB',
+        endpoints: [
+            '/api/profile',
+            '/api/skills',
+            '/api/skills/:id',
+            '/api/jobs',
+            '/api/jobs/:id',
+            '/api/recommendations'
+        ]
+    });
+});
+
 
 
 app.use('/api/profile', profileRoutes);
