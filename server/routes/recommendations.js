@@ -41,11 +41,12 @@ router.get('/', async (req, res) => {
        MATCH (j)-[:OFFERED_BY]->(c:Company)
        
        MATCH (j)-[:REQUIRES]->(allReq:Skill)
-       OPTIONAL MATCH (p)-[:HAS_SKILL]->(allReq)
+       OPTIONAL MATCH (p)-[:HAS_SKILL]->(matchedSkill:Skill)
+       WHERE matchedSkill = allReq
        
        WITH j, c, skillToLearn,
             count(DISTINCT allReq) AS totalRequired,
-            count(DISTINCT p) AS matchedCount
+            count(DISTINCT matchedSkill) AS matchedCount
        
        RETURN DISTINCT j, c, skillToLearn, totalRequired, matchedCount,
               round((toFloat(matchedCount) / totalRequired) * 100) AS matchPercent
@@ -53,6 +54,7 @@ router.get('/', async (req, res) => {
        LIMIT 5`,
             { personId: 'josh' }
         );
+
 
         const recommendedJobs = jobsResult.records.map(record => {
             const job = record.get('j').properties;
