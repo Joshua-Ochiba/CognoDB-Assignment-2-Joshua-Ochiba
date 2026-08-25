@@ -263,7 +263,7 @@ npm run dev            # Starts Vite dev server on http://localhost:5173
 
 - **Live Application Demo:** [https://cogno-db-assignment-2-joshua-ochiba.vercel.app/](https://cogno-db-assignment-2-joshua-ochiba.vercel.app/)
 - **Live API Endpoint:** [https://cognodb-assignment-2-joshua-ochiba.onrender.com/](https://cognodb-assignment-2-joshua-ochiba.onrender.com/)
-- **Video Walkthrough:** [Demo Recording Link](#) *(add your Loom/recording link here)*
+- **Video Walkthrough:** [https://drive.google.com/file/d/1S_Vdzva9tKSKsLeQVklQho1sHg_Sc7C9/view?usp=sharing] 
 
 ---
 
